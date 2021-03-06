@@ -1,4 +1,4 @@
-import { Publisher, Subjects, PaymentCreatedEvent } from '@baxdocs/common';
+import { Publisher, Subjects, PaymentCreatedEvent } from '@baxpom/common';
 
 export class PaymentCreatedPublisher extends Publisher<PaymentCreatedEvent> {
   readonly subject = Subjects.PaymentCreated;

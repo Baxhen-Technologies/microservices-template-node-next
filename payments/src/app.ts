@@ -3,7 +3,7 @@ import 'express-async-errors';
 import { json } from 'body-parser';
 import cookieSession from 'cookie-session';
 
-import { currentUser, errorHandler, NotFoundError } from '@baxdocs/common';
+import { currentUser, errorHandler, NotFoundError } from '@baxpom/common';
 import { createChargeRouter } from './routes/new';
 
 const app = express();

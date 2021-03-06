@@ -1,6 +1,6 @@
 import { MongoMemoryServer } from 'mongodb-memory-server';
 import mongoose from 'mongoose';
-import { Jwt } from '@baxdocs/common';
+import { Jwt } from '@baxpom/common';
 
 declare global {
   namespace NodeJS {

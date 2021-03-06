@@ -14,12 +14,12 @@ spec:
     spec:
       containers:
         - name: web
-          image: baxhen/baxdocs-web
+          image: baxhen/baxpom-web
           env:
             - name: NEXT_PUBLIC_STRIPE_PUBLIC_KEY
               value: pk_test_Gi5ry9vOhLbCtkBmkchRqfuX
             - name: NEXT_PUBLIC_BASE_URL
-              value: http://www.baxdocs.com
+              value: http://www.baxpom.com
 
 ---
 apiVersion: v1

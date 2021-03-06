@@ -7,8 +7,7 @@ import {
   BadRequestError,
   NotFoundError,
   NotAuthorizedError,
-  OrderStatus,
-} from '@baxdocs/common';
+} from '@baxpom/common';
 
 import { Order } from '../models/order';
 import { stripe } from '../stripe';
@@ -46,13 +45,13 @@ router.post(
       throw new NotAuthorizedError();
     }
 
-    if (
-      order.status === OrderStatus.CancelledByExpiration ||
-      order.status === OrderStatus.CancelledByUser ||
-      order.status === OrderStatus.CancelledTicketAlreadyReserved
-    ) {
-      throw new BadRequestError('Cannot pay for an cancelled order');
-    }
+    // if (
+    //   order.status === OrderStatus.CancelledByExpiration ||
+    //   order.status === OrderStatus.CancelledByUser ||
+    //   order.status === OrderStatus.CancelledTicketAlreadyReserved
+    // ) {
+    //   throw new BadRequestError('Cannot pay for an cancelled order');
+    // }
 
     try {
       const charge = await stripe.charges.create({

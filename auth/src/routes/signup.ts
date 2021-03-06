@@ -2,7 +2,7 @@ import express, { Request, Response } from 'express';
 import { body } from 'express-validator';
 
 import { User } from '../models/user';
-import { BadRequestError, Jwt, validateRequest } from '@baxdocs/common';
+import { BadRequestError, Jwt, validateRequest } from '@baxpom/common';
 
 const router = express.Router();
 

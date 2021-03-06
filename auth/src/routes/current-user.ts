@@ -1,6 +1,6 @@
 import express from 'express';
 
-import { currentUser } from '@baxdocs/common';
+import { currentUser } from '@baxpom/common';
 
 const router = express.Router();
 

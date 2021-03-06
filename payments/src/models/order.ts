@@ -1,8 +1,5 @@
 import mongoose from 'mongoose';
 import { updateIfCurrentPlugin } from 'mongoose-update-if-current';
-import { OrderStatus } from '@baxdocs/common';
-
-export { OrderStatus };
 
 // An interface that describe the properties
 // that are required to create a new Order
@@ -10,7 +7,6 @@ export { OrderStatus };
 interface OrderAttrs {
   id: string;
   userId: string;
-  status: OrderStatus;
   price: number;
   version: number;
 }
@@ -27,7 +23,6 @@ interface OrderModel extends mongoose.Model<OrderDoc> {
 
 interface OrderDoc extends mongoose.Document {
   userId: string;
-  status: OrderStatus;
   price: number;
 }
 
@@ -40,11 +35,6 @@ const orderSchema = new mongoose.Schema(
     price: {
       type: Number,
       required: true,
-    },
-    status: {
-      type: String,
-      required: true,
-      enum: Object.values(OrderStatus),
     },
   },
   {

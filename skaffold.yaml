@@ -9,7 +9,7 @@ build:
   local:
     push: false
   artifacts:
-    - image: baxhen/baxdocs-auth
+    - image: baxhen/baxpom-auth
       context: auth
       docker:
         dockerfile: Dockerfile.dev
@@ -17,7 +17,7 @@ build:
         manual:
           - src: 'src/**/*.ts'
             dest: .
-    - image: baxhen/baxdocs-payments
+    - image: baxhen/baxpom-payments
       context: payments
       docker:
         dockerfile: Dockerfile.dev
@@ -25,7 +25,7 @@ build:
         manual:
           - src: 'src/**/*.ts'
             dest: .
-    - image: baxhen/baxdocs-web
+    - image: baxhen/baxpom-web
       context: web
       docker:
         dockerfile: Dockerfile.dev

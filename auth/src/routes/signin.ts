@@ -1,7 +1,7 @@
 import express, { Request, Response } from 'express';
 import { body } from 'express-validator';
 
-import { BadRequestError, validateRequest, Jwt } from '@baxdocs/common';
+import { BadRequestError, validateRequest, Jwt } from '@baxpom/common';
 import { User } from '../models/user';
 import { Password } from '../services/password';
 
